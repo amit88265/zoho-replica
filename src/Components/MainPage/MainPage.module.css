@@ -1,0 +1,14 @@
+.MainPage {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+.Button {
+    width: 100px;
+    height: 40px;
+    margin-right: 5px;
+    background: white;
+    color: blue;
+    border-radius: 2px;
+}

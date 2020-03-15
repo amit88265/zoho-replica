@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import MainPage from './Components/MainPage/MainPage';
+import Home from './Components/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    loggedIn: false,
+    showSignUpPage: false
+  };
+
+  signUpHandler = () => {
+    this.setState({ showSignUpPage: true });
+  }
+
+  showHomePageHanlder = () => {
+    this.setState({ loggedIn: true });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        {!this.state.loggedIn ?
+          <MainPage showHomePage={this.showHomePageHanlder} signUpHandler={this.signUpHandler} showSignUpPage={this.state.showSignUpPage} />
+          : <Home />
+        }
+      </div>
+    );
+  }
 }
 
 export default App;
