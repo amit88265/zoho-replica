@@ -1,9 +1,10 @@
 import React from 'react';
+import CheckInCheckOut from './CheckInCheckOut/CheckInCheckOut';
 
 const Home = (props) => {
-    return (  
-        <p>Please, check in</p>
+    return (
+        <CheckInCheckOut />
     );
 }
- 
+
 export default Home;

@@ -12,17 +12,20 @@ class SignUp extends Component {
             mobile: _mobile.value,
             company: _company.value
         }
-        fetch('http://localhost:8080/signup', {
+        fetch('http://localhost:8080/zoho/signup', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userData)
         })
             .then(res => {
-                console.log("res", res.json());
+                console.log(res);
+                if (res.status === 201) {
+                    this.props.showHomePage();
+                }
+                return res.json();
             })
             .then(data => {
                 console.log("data", data);
-                this.props.showHomePage();
             })
             .catch(err => {
                 console.log("error", err);
