@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import Button from '../../UI/Button/Button';
+
+import btnStyle from '../../UI/Button/Button.module.css';
+
+import styles from './SignUp.module.css';
 
 class SignUp extends Component {
 
@@ -36,14 +41,14 @@ class SignUp extends Component {
 
     render() {
         return (
-            <form className="signUpForm">
+            <form className={styles.SignUp}>
                 <input ref="_username" type="text" placeholder="user name" ></input>
                 <input ref="_fullname" type="text" placeholder="full name" />
                 <input ref="_email" type="email" placeholder="email" />
                 <input ref="_password" type="password" placeholder="password" />
                 <input ref="_mobile" type="number" placeholder="mobile no." />
                 <input ref="_company" type="text" placeholder="company" />
-                <button onClick={this.submit}>submit</button>
+                <Button styles={btnStyle.Button}  clicked={this.submit}>submit</Button>
             </form>
         );
     }

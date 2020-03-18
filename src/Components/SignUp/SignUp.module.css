@@ -1,0 +1,20 @@
+.SignUp {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 32px;
+    align-items: center;
+}
+
+.SignUp input {
+    border: none;
+    height: 12%;
+    color: black;
+    margin-top: 4px;
+    border-radius: 2px;
+    padding-left: 16px;
+    width: 100%;
+    font-weight: 500;
+}

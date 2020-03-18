@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckInCheckOut from './CheckInCheckOut/CheckInCheckOut';
+import CheckInCheckOut from '../Containers/CheckInCheckOut/CheckInCheckOut';
 
 const Home = (props) => {
     return (

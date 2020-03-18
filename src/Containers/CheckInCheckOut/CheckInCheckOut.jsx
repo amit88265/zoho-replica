@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import styles from './CheckInCheckOut.module.css';
+import Button from '../../UI/Button/Button';
 
+import styles from './CheckInCheckOut.module.css';
+import btnStyles from '../../UI/Button/Button.module.css';
 
 class CheckInCheckOut extends Component {
 
@@ -13,7 +15,7 @@ class CheckInCheckOut extends Component {
 
     checkInHandler = () => {
         let newHH = 0, newMM = 0, ss = 0;
-        this.setState({ ischeckIn: true});
+        this.setState({ ischeckIn: true });
 
         setInterval(() => {
             ss++;
@@ -34,8 +36,8 @@ class CheckInCheckOut extends Component {
                 <p>Welcome to Zoho</p>
                 <div>{`${this.state.hh}:${this.state.mm}:${this.state.ss}`}</div>
                 {!this.state.ischeckIn ?
-                    <button className={styles.Button} onClick={this.checkInHandler}>Check In </button>
-                    : <button className={styles.Button} >Check Out </button>}
+                    <Button styles={btnStyles.Button} clicked={this.checkInHandler}>Check In</Button> :
+                    <Button styles={btnStyles.Button} >Check Out</Button>}
             </div>
         );
     }

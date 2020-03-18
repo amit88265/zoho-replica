@@ -21,7 +21,10 @@ class App extends Component {
     return (
       <div className="App">
         {!this.state.loggedIn ?
-          <MainPage showHomePage={this.showHomePageHanlder} signUpHandler={this.signUpHandler} showSignUpPage={this.state.showSignUpPage} />
+          <MainPage
+            showHomePage={this.showHomePageHanlder}
+            signUpHandler={this.signUpHandler}
+            showSignUpPage={this.state.showSignUpPage} />
           : <Home />
         }
       </div>

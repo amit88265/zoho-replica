@@ -1,7 +1,10 @@
 .MainPage {
     width: 250px;
     margin: 0 auto;
-    margin-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 256px;
 }
 
 .Button {
